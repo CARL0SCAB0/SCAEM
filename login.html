@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SCAEM</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content">
+          <h1 id="title">SCAEM</h1>
+          <p id="title-acronym">Sistema Contra Asaltos en el Estado de México</p>
+        </div>
+        <script>
+          function verificarRFC() {
+            var nombre = document.getElementById("nombre").value.toUpperCase();
+            var apellidoPaterno = document.getElementById("apellidoPaterno").value.toUpperCase();
+            var apellidoMaterno = document.getElementById("apellidoMaterno").value.toUpperCase();
+            var diaNacimiento = document.getElementById("diaNacimiento").value;
+            var mesNacimiento = document.getElementById("mesNacimiento").value;
+            var anioNacimiento = document.getElementById("anioNacimiento").value;
+            var rfcIngresado = document.getElementById("rfc").value.toUpperCase();
+      
+            
+            var rfcCalculado = apellidoPaterno.substring(0, 2) + apellidoMaterno.substring(0, 1) + nombre.substring(0, 1) + anioNacimiento.substring(2, 4) + mesNacimiento + diaNacimiento;
+      
+            
+            if (rfcCalculado === rfcIngresado) {
+              alert("El RFC es válido.");
+            } else {
+              alert("El RFC no es válido.");
+            }
+          }
+        </script>
+  <nav>
+    <ul>
+      <li><a href="login.html">INICIO DE SESIÓN</a></li>
+      <li class="menu-left"><a href="main.html">INICIO</a></li>
+      <li class="menu-left"><a href="#">RUTAS</a></li>
+      <li class="menu-left"><a href="#">DENUNCIAS</a></li>
+    </ul>
+  </nav>
+  <h1>Verificación de RFC</h1>
+  <label for="nombre">Nombre(s):</label>
+  <input type="text" id="nombre" />
+  <br>
+  <label for="apellidoPaterno">Apellido Paterno:</label>
+  <input type="text" id="apellidoPaterno" />
+  <br>
+  <label for="apellidoMaterno">Apellido Materno:</label>
+  <input type="text" id="apellidoMaterno" />
+  <br>
+  <label for="diaNacimiento">Día de Nacimiento:</label>
+  <input type="text" id="diaNacimiento" />
+  <br>
+  <label for="mesNacimiento">Mes de Nacimiento:</label>
+  <input type="text" id="mesNacimiento" />
+  <br>
+  <label for="anioNacimiento">Año de Nacimiento:</label>
+  <input type="text" id="anioNacimiento" />
+  <br>
+  <label for="rfc">RFC:</label>
+  <input type="text" id="rfc" />
+  <br>
+  <br>
+  <label for="contrasenia">Contraseña</label>
+  <input type="text" id="anioNacimiento" />
+  <br>
+  <button onclick="verificarRFC()">Verificar</button>
+  <footer>
+    <div>
+        <section id="about">
+            <header>
+                <h3>Acerca</h3>
+            </header>
+            <p>Si quieres seguir explorando recursos y oportunidades que resultan m&aacute;s compatibles con tu perfil, en el 
+                portal de Becas Santander encontrar&aacute;s soluciones a tu medida para seguir form&aacute;ndote y cumplir tus objetivos 
+                profesionales. &#161;An&iacute;mate a dar el siguiente paso&#33;</p>				
+            </section>
+            
+        <section id="blogroll">
+            <header>
+                <h3>Creadores</h3>
+                <a title="Instagram" href="http://www.instagram.com"><img src="imagenes\instagram.png" alt="instagram" /></a>
+                <a title="Facebook" href="http://www.facebook.com"><img src="imagenes\facebook.png" alt="facebook" /></a>
+                <a title="YouTube" href="http://www.youtube.com"><img src="imagenes\youtube.png" alt="youtube" /></a>
+                <a title="Twitter" href="https://www.twitter.com"><img src="imagenes\twitter.png" alt="twitter" /></a>
+                <a title="LinkedIn" href="https://www.linkedin.com/"><img src="imagenes\linkedin.png" alt="linkedin" /></a>
+            </header>
+            <ul>
+                
+            </ul>
+        </section>
+        <section id="ref">
+            <header>
+                <h3>Referencias</h3>
+            </header>
+            <ul>
+                <li><a href="https://www.becas-santander.com/es/blog/test-vocacional.html#">Becas Santander</a></li>
+                <li><a href="https://ascii.cl/es/codigos-html.htm">Tabla de C&oacute;digos HTML</a></li>
+                <li>Test vocacional: Descubre tu perfil profesional</li>
+                <li><a href="#">Test de orientacion vocacional</a></li>
+            </ul>
+        </section>
+    </div>
+</footer>
+</body>
+</html>
